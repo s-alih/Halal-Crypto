@@ -2,9 +2,8 @@
 
 Hala Crypto Community is the community dedicated to empowering an ethics-first Shariah-compliant financial crypto ecosystem
 
-# Run and deploy the token
 
-Follow the below steps to run and deploy the token and Haqq network
+Follow the below steps to run and deploy the website on server
 
 ## Install dependencies
 
