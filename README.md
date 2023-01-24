@@ -40,6 +40,31 @@ npm run start
 docker-compose build
 ```
 
+## Install the package
+```shell
+docker-compose run mint-hcc-app npm install
+```
+
+## Install the package
+```shell
+docker-compose run mint-hcc-app npm install
+```
+
+## Stop docker
+```shell
+docker-compose stop
+```
+
+## Stop docker
+```shell
+docker-compose stop
+```
+
+## Install the package
+```shell
+docker-compose run mint-hcc-app npm run build
+```
+
 ## Run created docker 
 
 ```shell
@@ -102,8 +127,6 @@ location / {
 
 
 ## Obtain an SSL Certificate 
-
-
 
 
 ### Approve SSL certificate
