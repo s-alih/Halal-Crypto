@@ -31,6 +31,9 @@ npm run start
 
 # Production configeration
 
+## Exposed port
+3000
+
 ## Build docker file
 
 ```shell
@@ -42,6 +45,39 @@ docker-compose build
 ```shell
 docker-compose up
 ```
+### The next app will up and running in your server
+
+
+### Install certbot
+```shell
+sudo apt install certbot 
+```
+#### enter your password for sudo 
+
+### Install certbot ngnix plugin 
+```shell
+sudo apt install python3-certbot-nginx
+```
+
+### Generate certificate using certbot
+```shell
+sudo certbot-auto certonly --standalone -d mint.haqq.community -d www.mint.haqq.community
+```
+
+### Then go to the path to ssl and enable ssl 
+
+```shell
+cd [path to ssl file of the domain]
+ssl on
+```
+
+### restart ssl
+
+```shell
+restart
+```
+
+
 
 
 # NGINX Setup
@@ -52,7 +88,11 @@ docker-compose up
 server {
         listen       80;
         listen       [::]:80;
+        listen       443 ssl;
         server_name  mint.haqq.community;
+        ssl_certificate     [path to ssl file file of domain]/fullchain.pem;
+        ssl_certificate_key [path to ssl file file of domain]/privkey.pem;
+        ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
 location / {
                 # reverse proxy for next server
                 proxy_pass http://localhost:3000;
@@ -60,8 +100,13 @@ location / {
 }
 ```
 
+
 ## Obtain an SSL Certificate 
 
+
+
+
+### Approve SSL certificate
 ```shell
 sudo certbot --nginx -d mint.haqq.community
 ```
