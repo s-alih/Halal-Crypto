@@ -1,0 +1,12 @@
+version: '3'
+
+
+services:
+  mint-hcc-app:
+      build:
+        context: ./
+        dockerfile: Dockerfile
+      ports:
+        - 3000:3000
+      volumes:
+        - .:/mint-hcc-app
