@@ -10,3 +10,4 @@ services:
         - 3000:3000
       volumes:
         - .:/mint-hcc-app
+        - /mint-hcc-app/node_modules

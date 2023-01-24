@@ -5,7 +5,7 @@ RUN mkdir  /mint-hcc-app
 
 WORKDIR /mint-hcc-app
 
-COPY package.json /mint-hcc-app
+COPY package*.json /mint-hcc-app
 
 RUN npm install
 
@@ -15,5 +15,5 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD [ "npm","run", "start" ]
+CMD [ "npm", "start" ]
 

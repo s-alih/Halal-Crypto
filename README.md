@@ -70,7 +70,6 @@ docker-compose run mint-hcc-app npm run build
 ```shell
 docker-compose up
 ```
-### The next app will up and running in your server
 
 
 ### Install certbot
