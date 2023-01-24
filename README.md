@@ -22,37 +22,29 @@ npm run dev
 npm run build
 ```
 
-## Start in production mode
+# Start in production mode
 
 ```shell
 npm run start
 ```
 
 
-## Production configeration
+# Production configeration
 
-# Build docker file
+## Build docker file
 
 ```shell
 docker-compose build
 ```
 
-# Run created docker 
+## Run created docker 
 
 ```shell
 docker-compose up
 ```
 
 
-
-
-
-## Setting NGINX
-
-
-```shell
-sudo nano [domainName].conf
-```
+# NGINX Setup
 
 ## Enter the following script as the configuration of our Nginx in the editor.
 
@@ -78,7 +70,7 @@ sudo certbot --nginx -d mint.haqq.community
 nano default
 ```
 
-# Check it is working 
+## Check it is working 
 
 ```shell
 nginx -t 
